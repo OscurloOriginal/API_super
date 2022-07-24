@@ -45,7 +45,7 @@ insert into condicion (tipoCondicion) values
 	("detenido"),
 	("desconocido");
 
-insert into vehiculo (vehiculo) values
+insert into vehiculo (nomVehiculo) values
 	("Ant-Van"),
 	("Leopardon"),
 	("Fantasticar"),

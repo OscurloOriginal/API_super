@@ -10,11 +10,11 @@ create table ciudadHeroe (idCiudadHeroe int AUTO_INCREMENT, ciudadHeroe varchar(
 
 create table condicion (idCondicion int AUTO_INCREMENT, tipoCondicion varchar(12) not null, primary key(idCondicion));
 
-create table vehiculo (idVehiculo int AUTO_INCREMENT, vehiculo varchar(100) not null, primary key(idVehiculo));
+create table vehiculo (idVehiculo int AUTO_INCREMENT, nomVehiculo varchar(100) not null, primary key(idVehiculo));
 
 create table super (idSuper int AUTO_INCREMENT, nomSuper varchar (100) not null, idGrupoHeroe int not null, idCiudadHeroe int not null, idCondicion int not null, idVehiculo int not null, img varchar(100), primary key(idSuper));
 
-	create table poderes (idSuper int not null, idTipoPoder int not null);
+create table poderes (idSuper int not null, idTipoPoder int not null);
 
 alter table super add foreign key (idGrupoHeroe) references grupoHeroe (idGrupoHeroe) ON DELETE CASCADE ON UPDATE CASCADE;
 alter table super add foreign key (idCiudadHeroe) references ciudadHeroe (idCiudadHeroe) ON DELETE CASCADE ON UPDATE CASCADE;
